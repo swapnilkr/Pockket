@@ -4,6 +4,10 @@ const app = express();
 
 const port = 8000;
 
+
+//calling db
+const db = require('./config/mongoose');
+
 const router = express.Router();
 
 //adding express ejs layout

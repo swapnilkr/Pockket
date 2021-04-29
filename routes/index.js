@@ -10,9 +10,15 @@ const paymentController = require('../controllers/payment_controller');
 
 const successfulController = require('../controllers/successful_controller');
 
+const userController = require('../controllers/users_controller');
+
 router.get('/',homeController.home);
 
 // router.use('/user',require('./users'));
+
+router.get('/Signin',userController.signIN);
+
+router.get('/Signup',userController.signUP);
 
 router.get('/payment',paymentController.payment);
 
