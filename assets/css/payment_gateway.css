@@ -227,7 +227,14 @@
 
 
 
-
+.container{
+background-image:linear-gradient(
+    90deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045) ;
+    
+}
 
 
 

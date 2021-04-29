@@ -14,7 +14,7 @@
     background-image: url('../images/Bck.jpg');
     margin: 0px;
     font-family: "Segoe UI", Arial, sans-serif;
-    color: white;
+    
  }
  
  /* removing margin for all the textual elements */
@@ -84,6 +84,10 @@
  }
  
  /* website function */
+ .website-name h1 
+ {
+    color: white;
+ }
  .website-name h4 
  {
     color: rgb(80, 220, 255);
