@@ -8,7 +8,7 @@
         <title>Pockket Payment Gateway</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- it is connected to two stylesheets -->
-        <link rel="stylesheet"  href='css/successful.css'><!-- this is the main stylesheet -->
+        <link rel="stylesheet"  href='css/user_sign_in.css'><!-- this is the main stylesheet -->
         <!-- desktop first approach is used for the same. -->
         <link rel="stylesheet" href="css/primary page responsive.css"><!-- this is the style sheet with all the media queries -->
         <!-- this script is just for font awesome fonts -->
@@ -62,3 +62,48 @@
         </nav>
     </body>
 
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign In</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                    
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="/create-session" method="POST">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                            
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="/Signup">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
