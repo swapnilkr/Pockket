@@ -6,6 +6,9 @@ const port = 8000;
 
 const router = express.Router();
 
+//adding express ejs layout
+const expressLayouts = require('express-ejs-layouts');
+
 app.listen(port,function(err){
     if (err){
         // interpolation
@@ -14,6 +17,10 @@ app.listen(port,function(err){
 
 })
 
+
+
+//adding static file
+app.use(express.static('./assets'));
 
 
 // to set up view engine

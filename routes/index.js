@@ -6,10 +6,13 @@ const router = expresss.Router();
 
 const homeController = require('../controllers/home_controller')
 
+const paymentController = require('../controllers/payment_controller');
+
 router.get('/',homeController.home);
 
-const userController = require('../controllers/users_controller');
+// router.use('/user',require('./users'));
 
-router.get('/',userController.users);
+router.get('/payment',paymentController.payment);
+
 
 module.exports = router;
