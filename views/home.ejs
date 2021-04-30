@@ -60,13 +60,37 @@
         <aside class="aside-section-1">
             <div class="music-themes-2">
                 <!-- 3 divs content -->
+                <% if (locals.user) { %>
                 <div class="outer-div">
                     <div class="inner-div">
                         
                       <span><a href="/payment"> Payment </a></span>  
                     </div>
                 </div>
+                
+                    <div class="outer-div">
+                    
+                        <div class="inner-div">
+                            
+                            <span> <a href="/"> <%= user.name %> </a></span>
+                        </div>
+                    </div>
+                    <div class="outer-div">
+                        <div class="inner-div">
+    
+                            <span><a href="/Signout"> Sign Out</a></span>
+                        </div>
+                    </div>
+                    <% } else { %>
+                        <div class="outer-div">
+                            <div class="inner-div">
+                                
+                              <span><a href="/Signin"> Payment </a></span>  
+                            </div>
+                        </div>
+                        
                 <div class="outer-div">
+                    
                     <div class="inner-div">
                         
                         <span><a href="/Signin"> Sign In </a></span>
@@ -78,6 +102,7 @@
                         <span><a href="/Signup"> Sign Up </a></span>
                     </div>
                 </div>
+                <% } %>
             </div>
         </aside>
     </main>
