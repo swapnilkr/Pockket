@@ -30,6 +30,13 @@ const router = express.Router();
 //adding express ejs layout
 const expressLayouts = require('express-ejs-layouts');
 
+const exphbs = require('express-handlebars');
+
+const bodyParser = require('body-parser');
+
+
+var messagebird = require('messagebird')();
+
 app.use(express.urlencoded({extended: false}));
 
 app.use(cookieParser());
@@ -69,8 +76,10 @@ app.use(passport.session());
 // user will be stored in locals
 app.use(passport.setAuthenticatedUser);
 
+app.use(bodyParser.urlencoded({defaultLayout: 'main'}));
 
 app.use('/',require('./routes'));
+
 
 app.listen(port,function(err){
     if (err){
@@ -78,4 +87,45 @@ app.listen(port,function(err){
         console.log(`Error in running the server : ${err}`);
     }
 
+})
+
+app.post('/step2',function(req,res){
+    var number = req.body.number;
+
+    messagebird.verify.create(number,{
+        template:"Your verification code is %token."
+    },function(err,response){
+        if (err){
+            console.log(err);
+            res.render('otp2',{
+                
+            });
+        } else {
+            console.log(response);
+            res.render('otp2',{
+                id:response.id
+            })
+        }
+    }
+    )
+})
+
+app.post('/step3',function(req,res){
+    var id = req.body.id;
+    var token = req.body.token;
+
+    messagebird.verify.verify(id,token,function(err,response){
+        if (err){
+            console.log(err);
+            res.render('successful',{
+                
+            });
+        } else {
+            console.log(response);
+            res.render('successful',{
+                id:response.id
+            })
+        }
+    }
+    )
 })
