@@ -7,9 +7,9 @@ const User = require('../models/user');
 
 // tell passport to use a new strategy for google login
 passport.use(new googleStrategy({
-    clientID: '310733745348-76aamo2sp4v66dpo5hvhpms0uscdvq4i.apps.googleusercontent.com',
-    clientSecret: 'r0baSOi-AoZKwgpJdKLuYLnP',
-    callbackURL: 'http://localhost:8000/auth/google/callback',
+    clientID: 'blah_something',
+    clientSecret: 'Keep_it_secret',
+    callbackURL: 'yoyo',
     },
 
     // same as jwt access token
