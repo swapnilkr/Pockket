@@ -89,7 +89,7 @@ app.listen(port,function(err){
 
 })
 
-app.post('/step2',function(req,res){
+app.post('/otp2',function(req,res){
     var number = req.body.number;
 
     messagebird.verify.create(number,{
@@ -110,7 +110,7 @@ app.post('/step2',function(req,res){
     )
 })
 
-app.post('/step3',function(req,res){
+app.post('/otp3',function(req,res){
     var id = req.body.id;
     var token = req.body.token;
 

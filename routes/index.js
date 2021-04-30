@@ -16,7 +16,7 @@ const userController = require('../controllers/users_controller');
 
 const otpController = require('../controllers/otp_controller');
 
-const step2Controller = require('../controllers/step2_controller');
+const otp2Controller = require('../controllers/otp2_controller');
 
 router.get('/',homeController.home);
 
@@ -45,7 +45,7 @@ router.get('/payment',paymentController.payment);
 
 router.get('/otp',otpController.otp);
 
-router.get('/step2',step2Controller.step2);
+router.get('/otp2',otp2Controller.otp2);
 
 router.get('/successful',successfulController.transaction);
 
