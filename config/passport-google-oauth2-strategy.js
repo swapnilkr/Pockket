@@ -5,12 +5,6 @@ const crypto = require('crypto');
 
 const User = require('../models/user');
 
-// tell passport to use a new strategy for google login
-passport.use(new googleStrategy({
-    clientID: 'blah_something',
-    clientSecret: 'Keep_it_secret',
-    callbackURL: 'yoyo',
-    },
 
     // same as jwt access token
     // refresh token when acess token expires we use access token to get new one
@@ -44,7 +38,7 @@ passport.use(new googleStrategy({
                     email : profile.emails[0].value,
 
                     // creating raandom password using crypto
-                    password : crypto.randomBytes[20].toString('hex'),
+                    password : crypto.randomBytes(20).toString('hex'),
                 }, function(err,user){
 
                     if (err){

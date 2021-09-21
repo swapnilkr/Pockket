@@ -34,7 +34,7 @@ router.post('/create-session',passport.authenticate
 (
     // if authenticated then done , if fails then user redirected to sign in
     'local',
-    {failureRedirect: '/users/sign-in'},
+    {failureRedirect: '/Signin'},
     // if done then createSession is executed
 ),userController.createSession);
 

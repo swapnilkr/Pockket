@@ -248,7 +248,8 @@
          border-radius: 2000px;
      }
      100%{
-         transform: scale(.9);
+         transform: scale(.7);
+         border-radius: 200px
      }
  }
 
@@ -264,6 +265,7 @@
     animation-fill-mode: none;
     /* animation-play-state: running; */
     
+    border-radius: 200px;
  }
 
  .thank
