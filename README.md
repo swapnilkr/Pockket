@@ -7,16 +7,22 @@
 
 <h2>Project Walkthrough:</h2>
 Home
+
 ![image](https://github.com/swapnilkr/Pockket/assets/49485584/1eab5297-a92a-4758-988a-66afbb6d71c2)
 SignIn
+
 ![image](https://github.com/swapnilkr/Pockket/assets/49485584/ab9b0b2b-1e9c-49d2-8539-2236c3b593e3)
 SignUp
+
 ![image](https://github.com/swapnilkr/Pockket/assets/49485584/2857a3d0-6f0b-4120-a82c-cfd18bcdecb5)
 Payment Page
+
 ![image](https://github.com/swapnilkr/Pockket/assets/49485584/9e869026-1da6-4c6a-86db-41cba7734152)
 OTP Confirmation
+
 ![image](https://github.com/swapnilkr/Pockket/assets/49485584/35d4ace8-64f8-4def-9009-36e49eacbf5c)
 Success Page
+
 ![image](https://github.com/swapnilkr/Pockket/assets/49485584/8873e3c1-d2c8-4960-9a48-f291aed2be92)
 
   
